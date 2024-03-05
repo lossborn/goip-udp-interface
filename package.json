@@ -1,6 +1,6 @@
 {
-  "name": "goip",
-  "version": "0.2.0",
+  "name": "goip-udp-interface",
+  "version": "0.2.1",
   "description": "Simple server and client for goip gateways",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,13 @@
     "goip",
     "sms",
     "server",
-    "client"
+    "client",
+    "ussd"
   ],
-  "author": "Michal Styrylski",
+  "author": "Lossborn",
+  "contributors": [
+    "Michal Styrylski (https://github.com/styryl)"
+  ],
   "license": "MIT",
   "dependencies": {
     "fast-xml-parser": "^3.16.0",
@@ -20,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/styryl/node-goip.git"
+    "url": "git://github.com/lossborn/goip-udp-interface.git"
   },
   "devDependencies": {
     "chai": "^4.2.0",
