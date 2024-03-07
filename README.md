@@ -3,7 +3,7 @@ This package allow to send and receive SMS messages using GSM / VOIP Goip1, Goip
 ## Installation
 
 ```bash
-npm install goip
+module not published
 ```
 
 ## Server usage instruction
@@ -234,4 +234,25 @@ const sms = new HttpSms(
     }
 
 })();
+```
+## Sending an ussd message
+
+#### Sending via UDP socket
+
+##### Example - sending one ussd and get response
+
+```javascript
+const {SocketUssd} = require('goip');
+
+const ussd = new SocketUssd(
+	'192.168.0.11', // Goip address
+	9991, // Goip port
+	'goip_password' // Goip password
+);
+
+ussd.sendOne('*100#').then( response => {
+    console.log(response);
+}).catch(error => {
+    console.log(error);
+});
 ```
