@@ -1,6 +1,6 @@
 node_modules
 docs
-test
+test/test.js
 app.js
 .npm
 package-lock.json
