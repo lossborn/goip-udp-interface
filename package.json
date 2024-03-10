@@ -4,7 +4,6 @@
   "description": "Simple server and client for goip gateways",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/ --recursive"
   },
   "keywords": [
     "goip",

@@ -3,7 +3,7 @@ This package allow to send and receive SMS messages using GSM / VOIP Goip1, Goip
 ## Installation
 
 ```bash
-module not published
+npm i goip-udp-interface
 ```
 
 ## Server usage instruction
@@ -13,7 +13,7 @@ To start receiving messages from Goip gateways you need to create and start a se
 #### Example 1
 
 ```javascript
-const {ServerFactory, HttpSms, SocketSms} = require('goip');
+const {ServerFactory, HttpSms, SocketSms} = require('goip-udp-interface');
 
 const server = ServerFactory.make(333);
 
@@ -27,7 +27,7 @@ server.run();
 #### Example 2
 
 ```javascript
-const {ServerFactory, MessageDispatcher, MessageFactory} = require('goip');
+const {ServerFactory, MessageDispatcher, MessageFactory} = require('goip-udp-interface');
 
 const server = ServerFactory.make(333, {
     'address': '0.0.0.0', // server address
@@ -45,7 +45,7 @@ server.run();
 #### Register message listener
 
 ```javascript
-const {ServerFactory} = require('goip');
+const {ServerFactory} = require('goip-udp-interface');
 
 const server = ServerFactory.make(333);
 
@@ -104,7 +104,7 @@ server.run();
 ##### Example 1 - sending one message and close the connection
 
 ```javascript
-const {SocketSms} = require('goip');
+const {SocketSms} = require('goip-udp-interface');
 
 const sms = new SocketSms(
 	'192.168.0.11', // Goip address
@@ -122,7 +122,7 @@ sms.sendOne('999999999','test sms message').then( response => {
 ##### Example 2 - sending many messages
 
 ```javascript
-const {SocketSms} = require('goip');
+const {SocketSms} = require('goip-udp-interface');
 
 const sms = new SocketSms(
 	'192.168.0.11', // Goip address
@@ -155,7 +155,7 @@ const sms = new SocketSms(
 ##### Example 1 - sending one message
 
 ```javascript
-const {HttpSms} = require('goip');
+const {HttpSms} = require('goip-udp-interface');
 
 const sms = new HttpSms(
     'http://192.168.0.11', // Goip http address
@@ -178,7 +178,7 @@ sms.send('999999999', 'test message').then((response) => {
 ##### Example 2 - sending many messages
 
 ```javascript
-const {HttpSms} = require('goip');
+const {HttpSms} = require('goip-udp-interface');
 
 const sms = new HttpSms('http://192.168.0.11',1,'login','password',{
     'waitForStatus': true
@@ -201,7 +201,7 @@ const sms = new HttpSms('http://192.168.0.11',1,'login','password',{
 ##### Example 3 - checking status by id
 
 ```javascript
-const {HttpSms} = require('goip');
+const {HttpSms} = require('goip-udp-interface');
 const sms = new HttpSms(
     'http://192.168.0.11', // Goip http address
     1, // Line number
@@ -242,7 +242,7 @@ const sms = new HttpSms(
 ##### Example - sending one ussd and get response
 
 ```javascript
-const {SocketUssd} = require('goip');
+const {SocketUssd} = require('goip-udp-interface');
 
 const ussd = new SocketUssd(
 	'192.168.0.11', // Goip address
